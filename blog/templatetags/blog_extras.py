@@ -34,3 +34,11 @@ def row(extra_classes=""):
 @register.simple_tag
 def endrow():
     return format_html("</div>")
+
+@register.simple_tag
+def col(extra_classes="", style= ""):
+    return format_html('<div class="col {}" style="{}">', extra_classes, style)
+    
+@register.simple_tag
+def endcol():
+    return format_html("</div>")
